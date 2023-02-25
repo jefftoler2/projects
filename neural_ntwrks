@@ -46,7 +46,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We load the Spambase dataset (https://archive.ics.uci.edu/ml/datasets/spambase) using a 80/20 train/test split:"
+    "Using Spambase dataset (https://archive.ics.uci.edu/ml/datasets/spambase) using a 80/20 train/test split:"
    ]
   },
   {
@@ -64,7 +64,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Question (a)"
+    ""
    ]
   },
   {
@@ -99,7 +99,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We plot the tree below. The orange nodes have a larger proportion of label-$0$ samples while the blue nodes have a larger proportion of label-$1$ samples, and the darker the color, the larger the proportion of the respective majority label is (with maximal value being 1). We can see that the tree makes pretty nice splits, perhaps the second leaf node starting from the left could be further splitted: the Gini impurity is pretty high."
+    "Tree plot below, the orange nodes have a larger proportion of label-$0$ samples while the blue nodes have a larger proportion of label-$1$ samples, and the darker the color, the larger the proportion of the respective majority label is (with maximal value being 1). We can see that the tree makes pretty nice splits, perhaps the second leaf node starting from the left could be further splitted: the Gini impurity is pretty high."
    ]
   },
   {
@@ -154,7 +154,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We plot the confusion matrix:"
+    "The confusion matrix:"
    ]
   },
   {
@@ -214,7 +214,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Question (b)"
+    ""
    ]
   },
   {
@@ -340,7 +340,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We save the test accuracy from this decision tree for Question (c):"
+    ""
    ]
   },
   {
@@ -356,7 +356,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Question (c)"
+    ""
    ]
   },
   {
@@ -419,7 +419,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We will choose $k = 3$ because the choice $k = 1$ would interpolate the training data, which is generally considered not to be good statistical practice (although this is still debated till today!). You will get full credit for this part as long as you pick a value of $k$ that is consistent with your observed validation curve."
+    "We will choose $k = 3$ because the choice $k = 1$ would interpolate the training data, which is generally considered not to be good statistical practice (although this is still debated till today!)"
    ]
   },
   {
@@ -506,7 +506,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Observe the suboptimal performance of the SVM. We will standardize the data then retrain all models using the same parameters. Make sure you follow the correct steps when standardizing training and test data: you should perform the scaling after the split so that test data information is not leaked into the training data, and use the training scaler to scale the test data."
+    ""
    ]
   },
   {
@@ -548,14 +548,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "All models, except the decision tree, now perform significantly better, with a bump of $+18.6$ points for the SVM! You may want to ponder why the scaling did not affect the decision tree's performance; this is because of the discrete \"thresholding\" nature of the decision tree classifier which makes it scale-invariant."
+    "All models, except the decision tree, now perform significantly better, with a bump of $+18.6$ points for the SVM"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We will now plot the confusion matrices for all of the types of classifiers."
+    "The confusion matrices for all of the types of classifiers."
    ]
   },
   {
@@ -692,11 +692,11 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Observe that the neural network achieves the best performance on all metrics: accuracy, false positive rate, and false negative rate. Therefore, it is our preferred model. We recap these metrics for the neural network below. Note that you may not have obtained this exact order of preference among models, but as long as your reported values are within reasonable range of the solutions provided here (and your order of preference is consistent with the reported values), you will get full credit.\n",
+    "Observe that the neural network achieves the best performance on all metrics: accuracy, false positive rate, and false negative rate. Therefore, it is our preferred model\n",
     "\n",
-    "In terms of justifying the design choice, we used accuracy metrics here because interpretation is not strictly necessary for spam classification. It is quite easy to tell a classifier to ignore a certain feature of your email (say if you receive a lot of email with many exclamation points!) and you don't really care about asking the classifier to produce justification for *why* it classified email as ham/spam. In other words, this is a prediction-driven task, which is why we go with a neural network.\n",
     "\n",
-    "If you are able to justify your own design choice in a compelling way, you will get full credit."
+    "\n",
+    ""
    ]
   },
   {
