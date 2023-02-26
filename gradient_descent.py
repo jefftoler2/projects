@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Start \n",
+    "# \n",
     "\n",
     "\n",
     ""
