@@ -3,7 +3,6 @@
 
 const int COLLECTIVE_DEBUG = 0;
 
-
  void HPC_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm) {
     // TODO: Implement this function using only sends and receives for communication instead of MPI_Bcast.
     int rank;
@@ -37,7 +36,7 @@ const int COLLECTIVE_DEBUG = 0;
 void HPC_Prefix(const HPC_Prefix_func* prefix_func, const void *sendbuf, void *recvbuf, int count,
                 MPI_Datatype datatype, MPI_Comm comm, void* wb1, void* wb2, void* wb3) {
     if (count <= 0) return;
-    /* Step 1. Run user function on local data with a NULL previous prefix. */
+    
     const void* local_last_prefix = prefix_func(NULL, sendbuf, recvbuf, count); // recvbuf gets local pp from send values
     int rank, size;
     MPI_Comm_size(comm, &size);
