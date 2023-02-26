@@ -3,12 +3,6 @@
 
 const int COLLECTIVE_DEBUG = 0;
 
-/*************************** DECLARE YOUR HELPER FUNCTIONS HERE ************************/
-
-
-
-/*************************** collective.h functions ************************/
-
 
  void HPC_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm) {
     // TODO: Implement this function using only sends and receives for communication instead of MPI_Bcast.
@@ -82,9 +76,8 @@ void HPC_Prefix(const HPC_Prefix_func* prefix_func, const void *sendbuf, void *r
     if (d > 0 && rank > 0){
         local_last_prefix = prefix_func(prefix, sendbuf, recvbuf, count); // do local prefix function starting with the prefix value found
     }
-    // TODO: Implement the rest of this function using sends and receives for communication.
+   
 }
 
 
-/*************************** DEFINE YOUR HELPER FUNCTIONS HERE ************************/
 
