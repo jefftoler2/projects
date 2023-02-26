@@ -1,2 +1,4 @@
-# The attached files are saved in a jupyter notebook format (ipynb) 
+# These files contain projects on different topics. 
+
+Collective is a program written in C++ that implements a parallel broadcast operation using OpenMPI
 
